@@ -1,0 +1,26 @@
+/* src/LetterGrid.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f0f0f0; */
+    /* border: 1px solid #ddd; */
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .grid-item:hover{
+    color:aquamarine;
+    text-shadow:
+        1px 1px 2px aquamarine,
+        0 0 1em aquamarine,
+        0 0 0.2em aquamarine;
+  }

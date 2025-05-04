@@ -3,6 +3,7 @@ import './App.css'
 // src/App.js
 // import React from 'react';
 import Board from './components/board';
+import RelatedWords from './components/wordlist';
 
 function App() {
   const letters = [
@@ -13,37 +14,22 @@ function App() {
     'U', 'V', 'W', 'X', 'Y', 'Z'
   ];
 
-  const fetchRelatedWords = async (word) => {
-    try {
-      const response = await fetch(`https://api.datamuse.com/words?rel_syn=${word}`);
-      const data = await response.json();
-      debugger
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const playerWord = event.target.elements.playerWord.value;
-    console.log('Form submitted with input:', playerWord);
-
-    fetchRelatedWords(playerWord);
-  };
-
-  // function using playerWord to make word list
+  const words = [
+    "the",
+    "quick",
+    "fox",
+    "jumped",
+    "over",
+    "the",
+    "lazy",
+    "dog"
+  ]
 
   return (
-    <div className="App">
-
-
-      <form onSubmit={handleSubmit}>
-        <input name="playerWord" placeholder='word'/>
-        <button type="submit">Submit</button>
-      </form>
-
+    <div className = "App">
+      <RelatedWords/>
       <h1>Board</h1>
-      <Board letters={letters} />
+      <Board letters={words} />
     </div>
   );
 }

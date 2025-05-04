@@ -1,9 +1,9 @@
 input for word (misspelled words)
-randomly generate word
+randomly generate word (words are sometimes weird)
 use input word to create list of words
 display those words
 
-add words to board (front, back, diagonals)
+*****add words to board (front, back, diagonals)*****
 track and save letters that player highlights
 click to indicate player is trying to enter a word
 check if player word is in word list, cross off if it is, otherwise unhighlight in board
